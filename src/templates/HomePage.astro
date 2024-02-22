@@ -4,11 +4,11 @@ const { page, user, query } = Astro.props.aposData;
 const { main } = page;
 ---
 
-<section class="bp-welcome">
+<section class="bp-content">
   <h1 class="bp-welcome__headline">
     Welcome to Apostrophe 3
   </h1>
-  { user ? '' : 
+  { user ? '' :
     <div>
       <h3 class="bp-welcome__help">First time spinning up the Apostrophe Astro combined project?</h3>
       <p>

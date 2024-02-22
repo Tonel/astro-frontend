@@ -5,11 +5,25 @@ import dayjs from 'dayjs';
 const { page, piece, user, query } = Astro.props.aposData;
 const { main } = piece;
 ---
+<style>
+  .publication-date {
+    text-align: center;
+    font-style: italic;
+    color: #505050;
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
 
-<section class="bp-content">
-  <h1>{ piece.title }</h1>
-  <h4>
-    Released On { dayjs(piece.publishedAt).format('MMMM D, YYYY') }
+  :global(p) {
+    margin-bottom: 30px;
+    line-height: 30px;
+  }
+</style>
+
+<section class='bp-content'>
+  <h1 class='h1'>{ piece.title }</h1>
+  <div class='publication-date'>
+    { dayjs(piece.publishedAt).format('MMMM D, YYYY') }
   </h4>
   <AposArea area={main} />
 </section>

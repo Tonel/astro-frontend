@@ -2,9 +2,10 @@
 import aposPageFetch from '@apostrophecms/apostrophe-astro/lib/aposPageFetch.js';
 import AposLayout from '@apostrophecms/apostrophe-astro/components/layouts/AposLayout.astro';
 import AposTemplate from '@apostrophecms/apostrophe-astro/components/AposTemplate.astro';
+import '../styles/blog.scss'
 
 const aposData = await aposPageFetch(Astro.request);
-const bodyClass = `myclass`;
+const bodyClass = `blog`;
 
 if (aposData.redirect) {
   return Astro.redirect(aposData.url, aposData.status);
@@ -14,10 +15,10 @@ if (aposData.notFound) {
 }
 ---
 <AposLayout title={aposData.page?.title} {aposData} {bodyClass}>
-    <Fragment slot="standardHead">
-      <meta name="description" content={aposData.page?.seoDescription} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charset="UTF-8" />
+    <Fragment slot='standardHead'>
+      <meta name='description' content={aposData.page?.seoDescription} />
+      <meta name='viewport' content='width=device-width, initial-scale=1' />
+      <meta charset='UTF-8' />
     </Fragment>
-    <AposTemplate {aposData} slot="main"/>
+    <AposTemplate {aposData} slot='main'/>
 </AposLayout>

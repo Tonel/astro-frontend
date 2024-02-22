@@ -1,0 +1,23 @@
+.blog-card {
+  border-radius: 5px;
+  border: solid #111111 1px;
+  padding: 20px;
+  margin-bottom: 10px;
+
+  &:hover {
+    border: solid #6236ff 1px;
+    background-color: #f2f0f9;
+    cursor: pointer;
+  }
+
+  .date {
+    font-style: italic;
+    color: #505050;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}
