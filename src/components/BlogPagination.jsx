@@ -1,4 +1,4 @@
-import './BlogPagination.scss';
+import './BlogPagination.scss'
 
 export default function BlogPagination({ pages = [] }) {
   return (
@@ -9,14 +9,15 @@ export default function BlogPagination({ pages = [] }) {
             key={page.number}
             className={`pagination-element ${page.current ? 'current' : ''}`}
             onClick={(e) => {
-              e.preventDefault();
-              window.location.href = page.url;
+              e.preventDefault()
+              // redirect to the blog index pagination page
+              window.location.href = page.url
             }}
           >
             <a href={page.url}>{page.number}</a>
           </span>
-        );
+        )
       })}
     </div>
-  );
+  )
 }

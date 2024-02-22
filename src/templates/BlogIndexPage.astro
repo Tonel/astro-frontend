@@ -1,7 +1,7 @@
 ---
-import setParameter from '@apostrophecms/apostrophe-astro/lib/aposSetQueryParameter.js';
-import BlogCard from '../components/BlogCard';
-import BlogPagination from '../components/BlogPagination';
+import setParameter from '@apostrophecms/apostrophe-astro/lib/aposSetQueryParameter.js'
+import BlogCard from '../components/BlogCard'
+import BlogPagination from '../components/BlogPagination'
 
 const {
   page,
@@ -11,30 +11,33 @@ const {
   pieces,
   currentPage,
   totalPages
-} = Astro.props.aposData;
+} = Astro.props.aposData
 
-const pages = [];
+const pages = []
 for (let i = 1; i <= totalPages; i++) {
-  console.log(page, currentPage)
   pages.push({
     number: i,
     current: i === currentPage,
     url: setParameter(Astro.url, 'page', i),
-  });
+  })
 }
 ---
 <style>
   h2 {
-    text-align: center;
+    text-align: center
   }
 </style>
 
 <section class='bp-content'>
   <h1 class='h1'>{page.title}</h1>
 
-  <h2 class='h2'>Blog Posts</h2>
+  <h2>Blog Posts</h2>
 
-  {pieces.map((piece) => <BlogCard blog={piece} client:load />)}
+  {
+    pieces.map((piece) => {
+      return <BlogCard blog={piece} client:load />
+    })
+  }
 
   <BlogPagination pages={pages} client:load />
 </section>

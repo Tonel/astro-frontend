@@ -21,6 +21,7 @@
     }
 
     &.current {
+      pointer-events: none;
       background-color: #111111;
       color: white;
     }
@@ -31,6 +32,4 @@
       cursor: pointer;
     }
   }
-
-
 }

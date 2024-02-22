@@ -1,7 +1,7 @@
 ---
-import AposArea from '@apostrophecms/apostrophe-astro/components/AposArea.astro';
-const { page, user, query } = Astro.props.aposData;
-const { main } = page;
+import AposArea from '@apostrophecms/apostrophe-astro/components/AposArea.astro'
+const { page, user, query } = Astro.props.aposData
+const { main } = page
 ---
 
 <section class="bp-content">
@@ -33,7 +33,7 @@ const { main } = page;
   <div class="bp-welcome__area">
     { (user && !query?.['apos-edit']) ?
       <p>
-        Enter <span class="bp-mode">Edit</span> mode from the admin bar <span style="display:inline-block; transform: rotate(45deg)">👆</span> to begin.
+        Enter <span class="bp-mode">Edit</span> mode from the admin bar <span style="display:inline-block transform: rotate(45deg)">👆</span> to begin.
       </p>
     :
       <p>

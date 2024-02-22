@@ -1,22 +1,23 @@
 ---
-import AposArea from '@apostrophecms/apostrophe-astro/components/AposArea.astro';
-import dayjs from 'dayjs';
+import AposArea from '@apostrophecms/apostrophe-astro/components/AposArea.astro'
+import dayjs from 'dayjs'
 
-const { page, piece, user, query } = Astro.props.aposData;
-const { main } = piece;
+const { page, piece, user, query } = Astro.props.aposData
+const { main } = piece
 ---
 <style>
   .publication-date {
     text-align: center;
     font-style: italic;
     color: #505050;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 25px;
   }
 
   :global(p) {
-    margin-bottom: 30px;
-    line-height: 30px;
+    margin-bottom: 35px;
+    line-height: 35px;
+    font-size: 18px;
   }
 </style>
 
